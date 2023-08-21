@@ -99,5 +99,21 @@ const endGame = () => {
 };
 
 
+//function to reset the game
+const resetGame = () => {
+    playerScore = 0;
+    computerScore = 0;
+
+    buttons.forEach(button => {
+        button.disabled = false;
+    });
+
+    resultElement.textContent = "";
+    updateScores();
+    reloadButton.classList.add('hidden');
+};
+
+updateScores();
+
 
 
