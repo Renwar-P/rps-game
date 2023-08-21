@@ -89,5 +89,15 @@ const updateScores = () => {
 };
 
 
+//function to run when the game ends
+const endGame = () => {
+    buttons.forEach(button => {
+        button.disabled = true;
+    });
+
+    reloadButton.classList.remove('hidden');
+};
+
+
 
 
