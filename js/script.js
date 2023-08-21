@@ -76,5 +76,18 @@ const playRound = (playerChoice, computerChoice) => {
 };
 
 
+// display the result 
+const displayResult = (result) => {
+    resultElement.textContent = result;
+};
+
+
+//function to update the score
+const updateScores = () => {
+    playerScoreElement.textContent = playerScore;
+    computerScoreElement.textContent = computerScore;
+};
+
+
 
 
