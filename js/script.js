@@ -8,3 +8,46 @@ const resultElement=document.querySelector('.result');
 const playerScoreElement = document.getElementById('player-score');
 const computerScoreElement = document.getElementById('computer-score');
 const reloadButton = document.getElementById('reload');
+
+
+
+// initialize player and computer scores
+let playerScore = 0;
+let computerScore = 0;
+
+
+
+// defining the button eventlistener
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const playerChoice = button.id;
+        const computerChoice = options[Math.floor(Math.random() * options.length)];
+
+
+
+
+       // determine the result of the round
+
+        const result = playRound(playerChoice, computerChoice);
+        displayResult(result);
+
+
+        //updates the result 
+
+        if (result === "You win!") {
+            playerScore++;
+        } else if (result === "Computer wins!") {
+            computerScore++;
+        }
+
+        updateScores();
+
+
+        //check if the game is over
+
+        if (playerScore + computerScore === 5) {
+            endGame();
+        }
+    });
+});
+
