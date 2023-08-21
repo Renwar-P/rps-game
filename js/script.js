@@ -1,10 +1,10 @@
 // defining the functions
 
-const options=["rock",
-"paper",
-"scissors"];
-const buttons=document.querySelectorAll('.options button');
-const resultElement=document.querySelector('.result');
+const options = ["rock",
+    "paper",
+    "scissors"];
+const buttons = document.querySelectorAll('.options button');
+const resultElement = document.querySelector('.result');
 const playerScoreElement = document.getElementById('player-score');
 const computerScoreElement = document.getElementById('computer-score');
 const reloadButton = document.getElementById('reload');
@@ -26,7 +26,7 @@ buttons.forEach(button => {
 
 
 
-       // determine the result of the round
+        // determine the result of the round
 
         const result = playRound(playerChoice, computerChoice);
         displayResult(result);
@@ -50,4 +50,31 @@ buttons.forEach(button => {
         }
     });
 });
+
+
+
+
+// eventlistener for the reload button
+reloadButton.addEventListener('click', () => {
+    resetGame();
+});
+
+
+// function to determine the result of a round
+const playRound = (playerChoice, computerChoice) => {
+    if (playerChoice === computerChoice) {
+        return "It's a tie!";
+    } else if (
+        (playerChoice === "rock" && computerChoice === "scissors") ||
+        (playerChoice === "paper" && computerChoice === "rock") ||
+        (playerChoice === "scissors" && computerChoice === "paper")
+    ) {
+        return "You win!";
+    } else {
+        return "Computer wins!";
+    }
+};
+
+
+
 
