@@ -1,4 +1,5 @@
 // defining the functions
+//this code is taken from the updateScore function from <https://www.codewithfaraz.com/content/107/create-rock-paper-scissors-game-with-html-css-and-javascript#javascript-code>
 
 const options = ["rock",
     "paper",
@@ -12,6 +13,7 @@ const reloadButton = document.getElementById('reload');
 
 
 // initialize player and computer scores
+//this code is taken from <https://www.codewithfaraz.com/content/107/create-rock-paper-scissors-game-with-html-css-and-javascript#javascript-code>
 let playerScore = 0;
 let computerScore = 0;
 
@@ -33,6 +35,7 @@ buttons.forEach(button => {
 
 
         //updates the result 
+        //this if function is taken from the updateScore function from <https://www.codewithfaraz.com/content/107/create-rock-paper-scissors-game-with-html-css-and-javascript#javascript-code>
 
         if (result === "You win!") {
             playerScore++;
@@ -44,6 +47,7 @@ buttons.forEach(button => {
 
 
         //check if the game is over
+        //I got the code to write this from <https://stackoverflow.com/questions/73178661/rock-paper-scissors-5-round-logic>. 
 
         if (playerScore + computerScore === 5) {
             endGame();
@@ -61,6 +65,7 @@ reloadButton.addEventListener('click', () => {
 
 
 // function to determine the result of a round
+//this function is taken from the updateScore function from <https://www.codewithfaraz.com/content/107/create-rock-paper-scissors-game-with-html-css-and-javascript#javascript-code>
 const playRound = (playerChoice, computerChoice) => {
     if (playerChoice === computerChoice) {
         return "It's a tie!";
@@ -94,7 +99,7 @@ const endGame = () => {
     buttons.forEach(button => {
         button.disabled = true;
     });
-
+    // I got the code to hide a button from https://stackoverflow.com/questions/8685107/hiding-a-button-in-javascript
     reloadButton.classList.remove('hidden');
 };
 
@@ -107,7 +112,7 @@ const resetGame = () => {
     buttons.forEach(button => {
         button.disabled = false;
     });
-
+    // I got the code to hide a button from https://stackoverflow.com/questions/8685107/hiding-a-button-in-javascript
     resultElement.textContent = "";
     updateScores();
     reloadButton.classList.add('hidden');
