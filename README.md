@@ -107,7 +107,7 @@ The live link can be found here - <https://renwar-p.github.io/rps-game/>
   
   - The fonts used in this project are Arial, sans-serif. 
 
-  - The color combinations used in this project is titled "Prussian blue, orange and mustars" and came from <https://looka.com/blog/color-combinations/> I choose these colors because i felt that they would work well with the overall spirit of the game. 
+  - The color combinations used in this project is titled "Prussian blue, orange and mustard" and came from <https://looka.com/blog/color-combinations/> I choose these colors because i felt that they would work well with the overall spirit of the game. 
   - The inspiration behind the HTML structure of this website comes from the structure provided in the "Portfolio Project Scope" video. 
   - The inspiration and overall JavaScipt structure behind the "Rock, Paper, Scissor" game comes from the site <https://www.codewithfaraz.com/content/107/create-rock-paper-scissors-game-with-html-css-and-javascript#javascript-code> However there are some differences in the JavaScript structure. 
 - 1. In my game I choose not to have a countdown timer. 
